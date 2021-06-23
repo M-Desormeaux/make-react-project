@@ -98,10 +98,6 @@ exec(
                     `${process.argv[2]}/src`
                 );
                 fs.copy(
-                    path.join(__dirname, "../images"),
-                    `${process.argv[2]}/images`
-                );
-                fs.copy(
                     path.join(__dirname, "../public"),
                     `${process.argv[2]}/public`
                 )
