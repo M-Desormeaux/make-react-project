@@ -14,7 +14,7 @@
     },
     "name": "make-react-project",
     "description": "To Be Described",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "main": "src/index.html",
     "devDependencies": {},
     "repository": {
