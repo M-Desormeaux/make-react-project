@@ -91,11 +91,19 @@ exec(
                 console.log(npmStdout);
                 console.log("Dependencies installed");
 
-                console.log("Copying additional files..");
+                console.log("Copying project architecture ... ");
                 // copy additional source files
                 fs.copy(
                     path.join(__dirname, "../src"),
                     `${process.argv[2]}/src`
+                );
+                fs.copy(
+                    path.join(__dirname, "../images"),
+                    `${process.argv[2]}/images`
+                );
+                fs.copy(
+                    path.join(__dirname, "../public"),
+                    `${process.argv[2]}/public`
                 )
                     .then(() =>
                         console.log(
