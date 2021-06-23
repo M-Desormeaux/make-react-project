@@ -1,0 +1,37 @@
+{
+    "dependencies": {
+        "parcel": "^2.0.0-beta.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "styled-components": "^5.3.0"
+    },
+    "scripts": {
+        "dev": "parcel src/index.html"
+    },
+    "bin": {
+        "your-boilerplate-name": "bin/start.js"
+    },
+    "name": "make-react-project",
+    "description": "To Be Described",
+    "version": "1.0.0",
+    "main": "index.html",
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/M-Desormeaux/make-react-project.git"
+    },
+    "keywords": [
+        "react",
+        "create",
+        "project",
+        "parcel",
+        "styled-components",
+        "template"
+    ],
+    "author": "Michael Desormeaux",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/M-Desormeaux/make-react-project/issues"
+    },
+    "homepage": "https://github.com/M-Desormeaux/make-react-project#readme"
+}

@@ -1,0 +1,7 @@
+## Stuff we don't need
+node_modules
+build
+dist
+.parcel-cache
+
+## add bin to this list once you have the project started
