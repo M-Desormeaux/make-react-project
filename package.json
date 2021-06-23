@@ -7,7 +7,7 @@
         "styled-components": "^5.3.0"
     },
     "scripts": {
-        "dev": "parcel src/index.html"
+        "dev": "parcel public/index.html"
     },
     "bin": {
         "make-react-project": "bin/start.js"
