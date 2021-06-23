@@ -1,4 +1,13 @@
 #!/usr/bin/env node
+
+/*
+        ENTIRE SCRIPT POSSIBLE THANKS TO   Nikhil Kumaran   !
+        His script is the base for this one, and I just hope 
+        it helps people get started with their projects even faster.
+
+        Check out his GitHub:   https://github.com/Nikhil-Kumaran
+*/
+
 const fs = require("fs-extra");
 const path = require("path");
 const https = require("https");
