@@ -6,13 +6,14 @@ const { exec } = require("child_process");
 
 const packageJson = require("../package.json");
 
+const scripts = `"dev": "parcel src/index.html"`;
+
 const getDeps = (deps) =>
     Object.entries(deps)
         .map((dep) => `${dep[0]}@${dep[1]}`)
         .toString()
         .replace(/,/g, " ")
         .replace(/^/g, "")
-        // exclude the dependency only used in this file, nor relevant to the boilerplate
         .replace(/fs-extra[^\s]+/g, "");
 
 console.log("Initializing project..");
@@ -22,7 +23,7 @@ exec(
     `mkdir ${process.argv[2]} && cd ${process.argv[2]} && npm init -f`,
     (initErr, initStdout, initStderr) => {
         if (initErr) {
-            console.error(`Everything was fine, then it wasn't:
+            console.error(`! Error Detected !:
     ${initErr}`);
             return;
         }
@@ -35,8 +36,8 @@ exec(
                 .replace(
                     '"test": "echo \\"Error: no test specified\\" && exit 1"',
                     scripts
-                )
-                .replace('"keywords": []', babel);
+                );
+            // .replace('"keywords": []', babel);
             fs.writeFile(packageJSON, data, (err2) => err2 || true);
         });
 
@@ -68,8 +69,10 @@ exec(
         console.log("Installing deps -- it might take a few minutes..");
         const devDeps = getDeps(packageJson.devDependencies);
         const deps = getDeps(packageJson.dependencies);
+        console.log(devDeps, " ", deps);
+
         exec(
-            `cd ${process.argv[2]} && git init && node -v && npm -v && npm i -D ${devDeps} && npm i -S ${deps}`,
+            `cd ${process.argv[2]} && git init && node -v && yarn add ${deps}`,
             (npmErr, npmStdout, npmStderr) => {
                 if (npmErr) {
                     console.error(`Some error while installing dependencies
