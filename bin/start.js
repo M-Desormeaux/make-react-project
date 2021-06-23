@@ -6,11 +6,6 @@ const { exec } = require("child_process");
 
 const packageJson = require("../package.json");
 
-const scripts = `"start": "webpack-dev-server --mode=development --open --hot",
-"build": "webpack --mode=production"`;
-
-const babel = `"babel": ${JSON.stringify(packageJson.babel)}`;
-
 const getDeps = (deps) =>
     Object.entries(deps)
         .map((dep) => `${dep[0]}@${dep[1]}`)
@@ -45,19 +40,9 @@ exec(
             fs.writeFile(packageJSON, data, (err2) => err2 || true);
         });
 
-        const filesToCopy = ["webpack.config.js"];
-
-        for (let i = 0; i < filesToCopy.length; i += 1) {
-            fs.createReadStream(
-                path.join(__dirname, `../${filesToCopy[i]}`)
-            ).pipe(
-                fs.createWriteStream(`${process.argv[2]}/${filesToCopy[i]}`)
-            );
-        }
-
         // npm will remove the .gitignore file when the package is installed, therefore it cannot be copied, locally and needs to be downloaded. Use your raw .gitignore once you pushed your code to GitHub.
         https.get(
-            "https://raw.githubusercontent.com/Nikhil-Kumaran/reactjs-boilerplate/master/.gitignore",
+            "https://raw.githubusercontent.com/M-Desormeaux/make-react-project/core/.gitignore",
             (res) => {
                 res.setEncoding("utf8");
                 let body = "";
@@ -102,7 +87,7 @@ exec(
                 )
                     .then(() =>
                         console.log(
-                            `All done!\n\nYour project is now ready\n\nUse the below command to run the app.\n\ncd ${process.argv[2]}\nnpm start`
+                            `All done!\n\nYour project is now ready\n\nUse the below command to run the app.\n\ncd ${process.argv[2]}\nyarn dev`
                         )
                     )
                     .catch((err) => console.error(err));

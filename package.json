@@ -1,5 +1,6 @@
 {
     "dependencies": {
+        "fs-extra": "^10.0.0",
         "parcel": "^2.0.0-beta.2",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
@@ -9,12 +10,12 @@
         "dev": "parcel src/index.html"
     },
     "bin": {
-        "your-boilerplate-name": "bin/start.js"
+        "make-react-project": "bin/start.js"
     },
     "name": "make-react-project",
     "description": "To Be Described",
     "version": "1.0.0",
-    "main": "index.html",
+    "main": "src/index.html",
     "devDependencies": {},
     "repository": {
         "type": "git",
