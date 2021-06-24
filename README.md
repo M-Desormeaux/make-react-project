@@ -8,7 +8,7 @@ Thanks to him this project exists and I am thankful to have found his posts on c
 
 1. Install make-react-project
 
-    - `npm install -g make-react-project`
+    - `yarn global add make-react-project`
 
 2. Navigate to the directory you made
 
