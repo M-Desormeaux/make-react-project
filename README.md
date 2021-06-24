@@ -21,6 +21,16 @@ Thanks to him this project exists and I am thankful to have found his posts on c
 
 5. Enjoy!
 
+## Comments
+
+Fundementally yarn is not NECESSARY for this to work but it is what I use as my default package management system. I recommend installing it but if enough requests are made I can change the script to use npm instead.
+
+If you get an error it is likely one of three reasons:
+
+-   yarn is not installed (yarn is an alternative to npm, so installing it globally gives you options)
+
+-   the folder name already exists, and since it does not remove folders, you will need to make a new name or delete the old folder.
+
 ## Future Additions
 
 -   Final Builds
