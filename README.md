@@ -16,11 +16,10 @@ Thanks to him this project exists and I am thankful to have found his posts on c
     - `cd ${your-project-name}`
 
 3. Develop your project
-4. Run the Development environment
 
-    - `yarn dev`
+### Commands
 
-5. Enjoy!
+Make React Project has two script commands atm, `dev` will launch a development setup on port 8080 in your default browser and `build` which will compile the site into a `build folder` in the project directory.
 
 ## Comments
 
