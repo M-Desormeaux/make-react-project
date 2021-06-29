@@ -15,7 +15,7 @@ const { exec } = require("child_process");
 
 const packageJson = require("../package.json");
 
-const scripts = `"start": "parcel serve public/index.html --port 8080 --log-level verbose --open",\n\t"build": "parcel build public/index.html  --dist-dir build"`;
+const scripts = `"dev": "parcel serve public/index.html --port 8080 --log-level verbose --open",\n\t"build": "parcel build public/index.html  --dist-dir build"`;
 
 const getDeps = (deps) =>
     Object.entries(deps)
